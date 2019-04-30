@@ -1,0 +1,14 @@
+C:\Users\Admin\Desktop\ef-db-first-master\EFCoreDatabaseFirstSample\EFCoreDatabaseFirstSample\bin\Debug\netcoreapp2.2\EFCoreDatabaseFirstSample.deps.json
+C:\Users\Admin\Desktop\ef-db-first-master\EFCoreDatabaseFirstSample\EFCoreDatabaseFirstSample\bin\Debug\netcoreapp2.2\EFCoreDatabaseFirstSample.runtimeconfig.json
+C:\Users\Admin\Desktop\ef-db-first-master\EFCoreDatabaseFirstSample\EFCoreDatabaseFirstSample\bin\Debug\netcoreapp2.2\EFCoreDatabaseFirstSample.runtimeconfig.dev.json
+C:\Users\Admin\Desktop\ef-db-first-master\EFCoreDatabaseFirstSample\EFCoreDatabaseFirstSample\bin\Debug\netcoreapp2.2\EFCoreDatabaseFirstSample.dll
+C:\Users\Admin\Desktop\ef-db-first-master\EFCoreDatabaseFirstSample\EFCoreDatabaseFirstSample\bin\Debug\netcoreapp2.2\EFCoreDatabaseFirstSample.pdb
+C:\Users\Admin\Desktop\ef-db-first-master\EFCoreDatabaseFirstSample\EFCoreDatabaseFirstSample\obj\Debug\netcoreapp2.2\EFCoreDatabaseFirstSample.csprojAssemblyReference.cache
+C:\Users\Admin\Desktop\ef-db-first-master\EFCoreDatabaseFirstSample\EFCoreDatabaseFirstSample\obj\Debug\netcoreapp2.2\EFCoreDatabaseFirstSample.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\ef-db-first-master\EFCoreDatabaseFirstSample\EFCoreDatabaseFirstSample\obj\Debug\netcoreapp2.2\EFCoreDatabaseFirstSample.RazorAssemblyInfo.cache
+C:\Users\Admin\Desktop\ef-db-first-master\EFCoreDatabaseFirstSample\EFCoreDatabaseFirstSample\obj\Debug\netcoreapp2.2\EFCoreDatabaseFirstSample.RazorAssemblyInfo.cs
+C:\Users\Admin\Desktop\ef-db-first-master\EFCoreDatabaseFirstSample\EFCoreDatabaseFirstSample\obj\Debug\netcoreapp2.2\EFCoreDatabaseFirstSample.AssemblyInfoInputs.cache
+C:\Users\Admin\Desktop\ef-db-first-master\EFCoreDatabaseFirstSample\EFCoreDatabaseFirstSample\obj\Debug\netcoreapp2.2\EFCoreDatabaseFirstSample.AssemblyInfo.cs
+C:\Users\Admin\Desktop\ef-db-first-master\EFCoreDatabaseFirstSample\EFCoreDatabaseFirstSample\obj\Debug\netcoreapp2.2\EFCoreDatabaseFirstSample.RazorTargetAssemblyInfo.cache
+C:\Users\Admin\Desktop\ef-db-first-master\EFCoreDatabaseFirstSample\EFCoreDatabaseFirstSample\obj\Debug\netcoreapp2.2\EFCoreDatabaseFirstSample.dll
+C:\Users\Admin\Desktop\ef-db-first-master\EFCoreDatabaseFirstSample\EFCoreDatabaseFirstSample\obj\Debug\netcoreapp2.2\EFCoreDatabaseFirstSample.pdb

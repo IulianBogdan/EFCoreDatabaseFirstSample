@@ -1,0 +1,789 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="101f66df-47b6-430e-8c0f-44eaeb92ef76" name="Default" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="BookDataManager.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/EFCoreDatabaseFirstSample/Models/DataManager/BookDataManager.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="32">
+              <caret line="28" column="29" lean-forward="true" selection-start-line="28" selection-start-column="29" selection-end-line="28" selection-end-column="29" />
+              <folding>
+                <marker date="1550779914000" expanded="false" signature="6:147" ph="..." />
+                <marker date="1550779914000" expanded="true" signature="203:1658" ph="{...}" />
+                <marker date="1550779914000" expanded="true" signature="271:1656" ph="{...}" />
+                <marker date="1550779914000" expanded="true" signature="393:459" ph="{...}" />
+                <marker date="1550779914000" expanded="true" signature="502:578" ph="{...}" />
+                <marker date="1550779914000" expanded="true" signature="620:1165" ph="{...}" />
+                <marker date="1550779914000" expanded="true" signature="831:888" ph="{...}" />
+                <marker date="1550779914000" expanded="true" signature="1205:1281" ph="{...}" />
+                <marker date="1550779914000" expanded="true" signature="1319:1395" ph="{...}" />
+                <marker date="1550779914000" expanded="true" signature="1457:1533" ph="{...}" />
+                <marker date="1550779914000" expanded="true" signature="1574:1650" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AuthorDataManager.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/EFCoreDatabaseFirstSample/Models/DataManager/AuthorDataManager.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="15" column="9" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
+              <folding>
+                <marker date="1556611332000" expanded="false" signature="6:184" ph="..." />
+                <marker date="1556611332000" expanded="true" signature="240:2673" ph="{...}" />
+                <marker date="1556611332000" expanded="true" signature="314:2671" ph="{...}" />
+                <marker date="1556611332000" expanded="true" signature="446:512" ph="{...}" />
+                <marker date="1556611332000" expanded="true" signature="557:705" ph="{...}" />
+                <marker date="1556611332000" expanded="true" signature="741:890" ph="{...}" />
+                <marker date="1556611332000" expanded="true" signature="932:1266" ph="{...}" />
+                <marker date="1556611332000" expanded="true" signature="1071:1256" ph="{...}" />
+                <marker date="1556611332000" expanded="true" signature="1307:1422" ph="{...}" />
+                <marker date="1556611332000" expanded="true" signature="1488:2546" ph="{...}" />
+                <marker date="1556611332000" expanded="true" signature="2384:2490" ph="{...}" />
+                <marker date="1556611332000" expanded="true" signature="2589:2665" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BookStoreContext.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/EFCoreDatabaseFirstSample/Models/BookStoreContext.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <marker date="1550779914000" expanded="false" signature="6:96" ph="..." />
+                <marker date="1550779914000" expanded="true" signature="140:4333" ph="{...}" />
+                <marker date="1550779914000" expanded="true" signature="196:4331" ph="{...}" />
+                <marker date="1550779914000" expanded="true" signature="236:256" ph="{...}" />
+                <marker date="1550779914000" expanded="true" signature="361:435" ph="{...}" />
+                <marker date="1550779914000" expanded="true" signature="909:1170" ph="{...}" />
+                <marker date="1550779914000" expanded="true" signature="965:1160" ph="{...}" />
+                <marker date="1550779914000" expanded="true" signature="1246:4325" ph="{...}" />
+                <marker date="1550779914000" expanded="true" signature="1390:1579" ph="{...}" />
+                <marker date="1550779914000" expanded="true" signature="1639:2290" ph="{...}" />
+                <marker date="1550779914000" expanded="true" signature="2341:3044" ph="{...}" />
+                <marker date="1550779914000" expanded="true" signature="3102:3819" ph="{...}" />
+                <marker date="1550779914000" expanded="true" signature="3878:4067" ph="{...}" />
+                <marker date="1550779914000" expanded="true" signature="4123:4313" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IMongoContext.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/EFCoreDatabaseFirstSample/Models/IMongoContext.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="13" column="1" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
+              <folding>
+                <marker date="1556552918834" expanded="true" signature="65:454" ph="{...}" />
+                <marker date="1556552918834" expanded="true" signature="102:452" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MongoContext.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/EFCoreDatabaseFirstSample/Models/MongoContext.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="6" lean-forward="true" selection-start-column="6" selection-end-column="6" />
+              <folding>
+                <marker date="1556552984946" expanded="true" signature="6:57" ph="..." />
+                <marker date="1556552984946" expanded="true" signature="101:815" ph="{...}" />
+                <marker date="1556552984946" expanded="true" signature="149:813" ph="{...}" />
+                <marker date="1556552984946" expanded="true" signature="262:418" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BookDataManagerMongo.cs" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/EFCoreDatabaseFirstSample/Models/DataManager/BookDataManagerMongo.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="13" column="9" lean-forward="true" selection-start-line="13" selection-start-column="9" selection-end-line="13" selection-end-column="9" />
+              <folding>
+                <marker date="1556554159229" expanded="false" signature="6:169" ph="..." />
+                <marker date="1556554159229" expanded="true" signature="225:1682" ph="{...}" />
+                <marker date="1556554159229" expanded="true" signature="298:1680" ph="{...}" />
+                <marker date="1556554159229" expanded="true" signature="413:475" ph="{...}" />
+                <marker date="1556554159229" expanded="true" signature="518:654" ph="{...}" />
+                <marker date="1556554159229" expanded="true" signature="688:896" ph="{...}" />
+                <marker date="1556554159229" expanded="true" signature="936:1012" ph="{...}" />
+                <marker date="1556554159229" expanded="true" signature="1050:1126" ph="{...}" />
+                <marker date="1556554159229" expanded="true" signature="1188:1436" ph="{...}" />
+                <marker date="1556554159229" expanded="true" signature="1477:1674" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BooksController.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/EFCoreDatabaseFirstSample/Controllers/BooksController.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret selection-end-line="36" selection-end-column="1" />
+              <folding>
+                <marker date="1550779914000" expanded="false" signature="6:296" ph="..." />
+                <marker date="1550779914000" expanded="true" signature="345:978" ph="{...}" />
+                <marker date="1550779914000" expanded="true" signature="442:976" ph="{...}" />
+                <marker date="1550779914000" expanded="true" signature="600:666" ph="{...}" />
+                <marker date="1550779914000" expanded="true" signature="762:970" ph="{...}" />
+                <marker date="1550779914000" expanded="true" signature="850:930" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BooksMongoController.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/EFCoreDatabaseFirstSample/Controllers/BooksMongoController.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-75">
+              <caret line="24" column="34" lean-forward="true" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="34" />
+              <folding>
+                <marker date="1556554700301" expanded="false" signature="6:296" ph="..." />
+                <marker date="1556554700301" expanded="true" signature="345:2246" ph="{...}" />
+                <marker date="1556554700301" expanded="true" signature="447:2244" ph="{...}" />
+                <marker date="1556554700301" expanded="true" signature="610:676" ph="{...}" />
+                <marker date="1556554700301" expanded="true" signature="738:838" ph="{...}" />
+                <marker date="1556554700301" expanded="true" signature="934:1142" ph="{...}" />
+                <marker date="1556554700301" expanded="true" signature="1022:1102" ph="{...}" />
+                <marker date="1556554700301" expanded="true" signature="1255:1602" ph="{...}" />
+                <marker date="1556554700301" expanded="true" signature="1295:1375" ph="{...}" />
+                <marker date="1556554700301" expanded="true" signature="1413:1478" ph="{...}" />
+                <marker date="1556554700301" expanded="true" signature="1722:2238" ph="{...}" />
+                <marker date="1556554700301" expanded="true" signature="1762:1842" ph="{...}" />
+                <marker date="1556554700301" expanded="true" signature="1937:2036" ph="{...}" />
+                <marker date="1556554700301" expanded="true" signature="2074:2139" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="appsettings.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/EFCoreDatabaseFirstSample/appsettings.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" column="23" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Startup.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/EFCoreDatabaseFirstSample/Startup.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="24" column="42" lean-forward="true" selection-start-line="24" selection-start-column="42" selection-end-line="24" selection-end-column="42" />
+              <folding>
+                <marker date="1556553034971" expanded="false" signature="6:626" ph="..." />
+                <marker date="1556553034971" expanded="true" signature="663:2723" ph="{...}" />
+                <marker date="1556553034971" expanded="true" signature="690:2721" ph="{...}" />
+                <marker date="1556553034971" expanded="true" signature="749:812" ph="{...}" />
+                <marker date="1556553034971" expanded="true" signature="1035:2107" ph="{...}" />
+                <marker date="1556553034971" expanded="true" signature="1794:2028" ph="{...}" />
+                <marker date="1556553034971" expanded="true" signature="2295:2715" ph="{...}" />
+                <marker date="1556553034971" expanded="true" signature="2342:2419" ph="{...}" />
+                <marker date="1556553034971" expanded="true" signature="2436:2639" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/EFCoreDatabaseFirstSample/Models/Book.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/EFCoreDatabaseFirstSample/Models/Author.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/EFCoreDatabaseFirstSample/Controllers/PublishersController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/EFCoreDatabaseFirstSample/Program.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/EFCoreDatabaseFirstSample/Controllers/BooksController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/EFCoreDatabaseFirstSample/Controllers/AuthorsController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/EFCoreDatabaseFirstSample/Models/DTO/AuthorContactDTO.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/EFCoreDatabaseFirstSample/Controllers/BooksMongoController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/EFCoreDatabaseFirstSample/Models/Repository/IDataRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/EFCoreDatabaseFirstSample/Models/DTO/BookDTO.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/EFCoreDatabaseFirstSample/Models/DataManager/BookDataManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/EFCoreDatabaseFirstSample/Models/DataManager/AuthorDataManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/EFCoreDatabaseFirstSample/Startup.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/EFCoreDatabaseFirstSample/Models/DataManager/PublisherDataManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/EFCoreDatabaseFirstSample/Models/AuthorContact.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/EFCoreDatabaseFirstSample/Models/BookStoreContext.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/EFCoreDatabaseFirstSample/Models/MongoContext.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/EFCoreDatabaseFirstSample/Models/MongoSettings.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/EFCoreDatabaseFirstSample/Models/DTO/AuthorDTO.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/EFCoreDatabaseFirstSample/Models/DataManager/BookDataManagerMongo.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/EFCoreDatabaseFirstSample/Models/IMongoContext.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/EFCoreDatabaseFirstSample/appsettings.json" />
+        <option value="$PROJECT_DIR$/EFCoreDatabaseFirstSample/Models/MongoSettings.cs" />
+        <option value="$PROJECT_DIR$/EFCoreDatabaseFirstSample/Models/IMongoContext.cs" />
+        <option value="$PROJECT_DIR$/EFCoreDatabaseFirstSample/Models/MongoContext.cs" />
+        <option value="$PROJECT_DIR$/EFCoreDatabaseFirstSample/Startup.cs" />
+        <option value="$PROJECT_DIR$/EFCoreDatabaseFirstSample/Models/DataManager/BookDataManager.cs" />
+        <option value="$PROJECT_DIR$/EFCoreDatabaseFirstSample/Models/DataManager/BookDataManagerMongo.cs" />
+        <option value="$PROJECT_DIR$/EFCoreDatabaseFirstSample/Controllers/BooksMongoController.cs" />
+        <option value="$PROJECT_DIR$/EFCoreDatabaseFirstSample/Models/Repository/IDataRepository.cs" />
+        <option value="$PROJECT_DIR$/EFCoreDatabaseFirstSample/Models/DataManager/AuthorDataManager.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="950" />
+    <option name="width" value="980" />
+    <option name="height" value="1040" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="SolutionExplorer" proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scratches" />
+      <pane id="SolutionExplorer">
+        <subPane>
+          <expand>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="EFCoreDatabaseFirstSample (1 project)" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="EFCoreDatabaseFirstSample (1 project)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="EFCoreDatabaseFirstSample" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="EFCoreDatabaseFirstSample (1 project)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="EFCoreDatabaseFirstSample" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Controllers" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="EFCoreDatabaseFirstSample (1 project)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="EFCoreDatabaseFirstSample" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Models" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="EFCoreDatabaseFirstSample (1 project)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="EFCoreDatabaseFirstSample" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Models" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="DataManager" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="EFCoreDatabaseFirstSample (1 project)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="EFCoreDatabaseFirstSample" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Models" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="DTO" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="EFCoreDatabaseFirstSample (1 project)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="EFCoreDatabaseFirstSample" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Models" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Repository" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+        <option name="show-file-system" value="false" />
+        <option name="show-all-items" value="false" />
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Rider.ProjectViewActivator.IsNotFirstRun" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="Default" type="DotNetProject" factoryName=".NET Project">
+      <option name="EXE_PATH" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="PROJECT_PATH" value="" />
+      <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
+      <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
+      <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
+      <option name="PROJECT_KIND" value="None" />
+      <option name="PROJECT_TFM" value="" />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="101f66df-47b6-430e-8c0f-44eaeb92ef76" name="Default" comment="" />
+      <created>1556549212658</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1556549212658</updated>
+      <workItem from="1556549268218" duration="4771000" />
+      <workItem from="1556609977400" duration="1064000" />
+      <workItem from="1556612315574" duration="280000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="6115000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <layout>
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Errors In Solution" order="3" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Unit Tests" order="7" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="REST Client" order="7" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="NuGet" order="7" weight="0.32905984" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25637585" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="right" id="Database" order="3" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Build" order="7" />
+      <window_info anchor="bottom" id="Find" order="1" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="UnityProjectConfiguration" isUnityUI="false" />
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/EFCoreDatabaseFirstSample.sln">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="78" selection-start-line="5" selection-start-column="78" selection-end-line="5" selection-end-column="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EFCoreDatabaseFirstSample/Models/DataManager/AuthorDataManager.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="720">
+          <caret line="52" column="27" selection-start-line="52" selection-start-column="27" selection-end-line="52" selection-end-column="50" />
+          <folding>
+            <marker date="1556611332000" expanded="false" signature="6:184" ph="..." />
+            <marker date="1556611332000" expanded="true" signature="240:2673" ph="{...}" />
+            <marker date="1556611332000" expanded="true" signature="314:2671" ph="{...}" />
+            <marker date="1556611332000" expanded="true" signature="446:512" ph="{...}" />
+            <marker date="1556611332000" expanded="true" signature="557:705" ph="{...}" />
+            <marker date="1556611332000" expanded="true" signature="741:890" ph="{...}" />
+            <marker date="1556611332000" expanded="true" signature="932:1266" ph="{...}" />
+            <marker date="1556611332000" expanded="true" signature="1071:1256" ph="{...}" />
+            <marker date="1556611332000" expanded="true" signature="1307:1422" ph="{...}" />
+            <marker date="1556611332000" expanded="true" signature="1488:2546" ph="{...}" />
+            <marker date="1556611332000" expanded="true" signature="2384:2490" ph="{...}" />
+            <marker date="1556611332000" expanded="true" signature="2589:2665" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EFCoreDatabaseFirstSample/Models/DataManager/BookDataManagerMongo.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="885">
+          <caret line="59" column="22" selection-start-line="59" selection-start-column="22" selection-end-line="59" selection-end-column="22" />
+          <folding>
+            <marker date="1556554159229" expanded="false" signature="6:169" ph="..." />
+            <marker date="1556554159229" expanded="true" signature="298:1680" ph="{...}" />
+            <marker date="1556554159229" expanded="true" signature="413:475" ph="{...}" />
+            <marker date="1556554159229" expanded="true" signature="518:654" ph="{...}" />
+            <marker date="1556554159229" expanded="true" signature="688:896" ph="{...}" />
+            <marker date="1556554159229" expanded="true" signature="936:1012" ph="{...}" />
+            <marker date="1556554159229" expanded="true" signature="1050:1126" ph="{...}" />
+            <marker date="1556554159229" expanded="true" signature="1188:1436" ph="{...}" />
+            <marker date="1556554159229" expanded="true" signature="1477:1674" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EFCoreDatabaseFirstSample/Controllers/BooksMongoController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="870">
+          <caret line="58" column="42" selection-start-line="58" selection-start-column="42" selection-end-line="58" selection-end-column="42" />
+          <folding>
+            <marker date="1556554700301" expanded="false" signature="6:296" ph="..." />
+            <marker date="1556554700301" expanded="true" signature="447:2244" ph="{...}" />
+            <marker date="1556554700301" expanded="true" signature="610:676" ph="{...}" />
+            <marker date="1556554700301" expanded="true" signature="738:838" ph="{...}" />
+            <marker date="1556554700301" expanded="true" signature="934:1142" ph="{...}" />
+            <marker date="1556554700301" expanded="true" signature="1022:1102" ph="{...}" />
+            <marker date="1556554700301" expanded="true" signature="1255:1602" ph="{...}" />
+            <marker date="1556554700301" expanded="true" signature="1295:1375" ph="{...}" />
+            <marker date="1556554700301" expanded="true" signature="1413:1478" ph="{...}" />
+            <marker date="1556554700301" expanded="true" signature="1722:2238" ph="{...}" />
+            <marker date="1556554700301" expanded="true" signature="1762:1842" ph="{...}" />
+            <marker date="1556554700301" expanded="true" signature="1937:2036" ph="{...}" />
+            <marker date="1556554700301" expanded="true" signature="2074:2139" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EFCoreDatabaseFirstSample/Models/DataManager/PublisherDataManager.cs">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EFCoreDatabaseFirstSample/Controllers/BooksController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="36" selection-end-column="1" />
+          <folding>
+            <marker date="1550779914000" expanded="false" signature="6:296" ph="..." />
+            <marker date="1550779914000" expanded="true" signature="442:976" ph="{...}" />
+            <marker date="1550779914000" expanded="true" signature="600:666" ph="{...}" />
+            <marker date="1550779914000" expanded="true" signature="762:970" ph="{...}" />
+            <marker date="1550779914000" expanded="true" signature="850:930" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EFCoreDatabaseFirstSample/Models/DTO/BookDTO.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <marker date="1550779914000" expanded="true" signature="81:322" ph="{...}" />
+            <marker date="1550779914000" expanded="true" signature="108:320" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EFCoreDatabaseFirstSample/Models/DataManager/BookDataManager.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="37" column="41" selection-start-line="37" selection-start-column="41" selection-end-line="37" selection-end-column="41" />
+          <folding>
+            <marker date="1550779914000" expanded="false" signature="6:147" ph="..." />
+            <marker date="1550779914000" expanded="true" signature="203:1658" ph="{...}" />
+            <marker date="1550779914000" expanded="true" signature="271:1656" ph="{...}" />
+            <marker date="1550779914000" expanded="true" signature="393:459" ph="{...}" />
+            <marker date="1550779914000" expanded="true" signature="502:578" ph="{...}" />
+            <marker date="1550779914000" expanded="true" signature="620:1165" ph="{...}" />
+            <marker date="1550779914000" expanded="true" signature="831:888" ph="{...}" />
+            <marker date="1550779914000" expanded="true" signature="1205:1281" ph="{...}" />
+            <marker date="1550779914000" expanded="true" signature="1319:1395" ph="{...}" />
+            <marker date="1550779914000" expanded="true" signature="1457:1533" ph="{...}" />
+            <marker date="1550779914000" expanded="true" signature="1574:1650" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EFCoreDatabaseFirstSample/Startup.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="33" column="67" selection-start-line="33" selection-start-column="67" selection-end-line="33" selection-end-column="67" />
+          <folding>
+            <marker date="1556553034971" expanded="false" signature="6:626" ph="..." />
+            <marker date="1556553034971" expanded="true" signature="663:2723" ph="{...}" />
+            <marker date="1556553034971" expanded="true" signature="690:2721" ph="{...}" />
+            <marker date="1556553034971" expanded="true" signature="749:812" ph="{...}" />
+            <marker date="1556553034971" expanded="true" signature="1035:2107" ph="{...}" />
+            <marker date="1556553034971" expanded="true" signature="1794:2028" ph="{...}" />
+            <marker date="1556553034971" expanded="true" signature="2295:2715" ph="{...}" />
+            <marker date="1556553034971" expanded="true" signature="2342:2419" ph="{...}" />
+            <marker date="1556553034971" expanded="true" signature="2436:2639" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EFCoreDatabaseFirstSample/Models/Repository/IDataRepository.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+          <folding>
+            <marker date="1556611331909" expanded="true" signature="88:391" ph="{...}" />
+            <marker date="1556611331909" expanded="true" signature="146:389" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EFCoreDatabaseFirstSample/Controllers/AuthorsController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="870">
+          <caret line="58" column="40" lean-forward="true" selection-start-line="58" selection-start-column="40" selection-end-line="58" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EFCoreDatabaseFirstSample/Models/MongoSettings.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="48" selection-start-line="5" selection-start-column="48" selection-end-line="5" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EFCoreDatabaseFirstSample/Models/DataManager/PublisherDataManager.cs">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EFCoreDatabaseFirstSample/Controllers/AuthorsController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="647">
+          <caret line="58" column="40" selection-start-line="58" selection-start-column="40" selection-end-line="58" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EFCoreDatabaseFirstSample/Program.cs">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EFCoreDatabaseFirstSample.sln">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="78" selection-start-line="5" selection-start-column="78" selection-end-line="5" selection-end-column="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EFCoreDatabaseFirstSample/Models/Repository/IDataRepository.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="5" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
+          <folding>
+            <marker date="1556611331909" expanded="true" signature="88:391" ph="{...}" />
+            <marker date="1556611331909" expanded="true" signature="146:389" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EFCoreDatabaseFirstSample/Models/Book.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <marker date="1550779914000" expanded="false" signature="6:47" ph="..." />
+            <marker date="1550779914000" expanded="true" signature="91:595" ph="{...}" />
+            <marker date="1550779914000" expanded="true" signature="123:593" ph="{...}" />
+            <marker date="1550779914000" expanded="true" signature="151:225" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EFCoreDatabaseFirstSample/Models/DTO/BookDTO.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <marker date="1550779914000" expanded="true" signature="81:322" ph="{...}" />
+            <marker date="1550779914000" expanded="true" signature="108:320" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EFCoreDatabaseFirstSample/Startup.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="24" column="42" lean-forward="true" selection-start-line="24" selection-start-column="42" selection-end-line="24" selection-end-column="42" />
+          <folding>
+            <marker date="1556553034971" expanded="false" signature="6:626" ph="..." />
+            <marker date="1556553034971" expanded="true" signature="663:2723" ph="{...}" />
+            <marker date="1556553034971" expanded="true" signature="690:2721" ph="{...}" />
+            <marker date="1556553034971" expanded="true" signature="749:812" ph="{...}" />
+            <marker date="1556553034971" expanded="true" signature="1035:2107" ph="{...}" />
+            <marker date="1556553034971" expanded="true" signature="1794:2028" ph="{...}" />
+            <marker date="1556553034971" expanded="true" signature="2295:2715" ph="{...}" />
+            <marker date="1556553034971" expanded="true" signature="2342:2419" ph="{...}" />
+            <marker date="1556553034971" expanded="true" signature="2436:2639" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EFCoreDatabaseFirstSample/Models/DataManager/BookDataManager.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="32">
+          <caret line="28" column="29" lean-forward="true" selection-start-line="28" selection-start-column="29" selection-end-line="28" selection-end-column="29" />
+          <folding>
+            <marker date="1550779914000" expanded="false" signature="6:147" ph="..." />
+            <marker date="1550779914000" expanded="true" signature="203:1658" ph="{...}" />
+            <marker date="1550779914000" expanded="true" signature="271:1656" ph="{...}" />
+            <marker date="1550779914000" expanded="true" signature="393:459" ph="{...}" />
+            <marker date="1550779914000" expanded="true" signature="502:578" ph="{...}" />
+            <marker date="1550779914000" expanded="true" signature="620:1165" ph="{...}" />
+            <marker date="1550779914000" expanded="true" signature="831:888" ph="{...}" />
+            <marker date="1550779914000" expanded="true" signature="1205:1281" ph="{...}" />
+            <marker date="1550779914000" expanded="true" signature="1319:1395" ph="{...}" />
+            <marker date="1550779914000" expanded="true" signature="1457:1533" ph="{...}" />
+            <marker date="1550779914000" expanded="true" signature="1574:1650" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EFCoreDatabaseFirstSample/Models/DataManager/AuthorDataManager.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="15" column="9" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
+          <folding>
+            <marker date="1556611332000" expanded="false" signature="6:184" ph="..." />
+            <marker date="1556611332000" expanded="true" signature="240:2673" ph="{...}" />
+            <marker date="1556611332000" expanded="true" signature="314:2671" ph="{...}" />
+            <marker date="1556611332000" expanded="true" signature="446:512" ph="{...}" />
+            <marker date="1556611332000" expanded="true" signature="557:705" ph="{...}" />
+            <marker date="1556611332000" expanded="true" signature="741:890" ph="{...}" />
+            <marker date="1556611332000" expanded="true" signature="932:1266" ph="{...}" />
+            <marker date="1556611332000" expanded="true" signature="1071:1256" ph="{...}" />
+            <marker date="1556611332000" expanded="true" signature="1307:1422" ph="{...}" />
+            <marker date="1556611332000" expanded="true" signature="1488:2546" ph="{...}" />
+            <marker date="1556611332000" expanded="true" signature="2384:2490" ph="{...}" />
+            <marker date="1556611332000" expanded="true" signature="2589:2665" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EFCoreDatabaseFirstSample/Models/BookStoreContext.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <marker date="1550779914000" expanded="false" signature="6:96" ph="..." />
+            <marker date="1550779914000" expanded="true" signature="140:4333" ph="{...}" />
+            <marker date="1550779914000" expanded="true" signature="196:4331" ph="{...}" />
+            <marker date="1550779914000" expanded="true" signature="236:256" ph="{...}" />
+            <marker date="1550779914000" expanded="true" signature="361:435" ph="{...}" />
+            <marker date="1550779914000" expanded="true" signature="909:1170" ph="{...}" />
+            <marker date="1550779914000" expanded="true" signature="965:1160" ph="{...}" />
+            <marker date="1550779914000" expanded="true" signature="1246:4325" ph="{...}" />
+            <marker date="1550779914000" expanded="true" signature="1390:1579" ph="{...}" />
+            <marker date="1550779914000" expanded="true" signature="1639:2290" ph="{...}" />
+            <marker date="1550779914000" expanded="true" signature="2341:3044" ph="{...}" />
+            <marker date="1550779914000" expanded="true" signature="3102:3819" ph="{...}" />
+            <marker date="1550779914000" expanded="true" signature="3878:4067" ph="{...}" />
+            <marker date="1550779914000" expanded="true" signature="4123:4313" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EFCoreDatabaseFirstSample/Models/IMongoContext.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="1" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
+          <folding>
+            <marker date="1556552918834" expanded="true" signature="65:454" ph="{...}" />
+            <marker date="1556552918834" expanded="true" signature="102:452" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EFCoreDatabaseFirstSample/appsettings.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="23" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EFCoreDatabaseFirstSample/Models/MongoContext.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="6" lean-forward="true" selection-start-column="6" selection-end-column="6" />
+          <folding>
+            <marker date="1556552984946" expanded="true" signature="6:57" ph="..." />
+            <marker date="1556552984946" expanded="true" signature="101:815" ph="{...}" />
+            <marker date="1556552984946" expanded="true" signature="149:813" ph="{...}" />
+            <marker date="1556552984946" expanded="true" signature="262:418" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EFCoreDatabaseFirstSample/Controllers/BooksController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="36" selection-end-column="1" />
+          <folding>
+            <marker date="1550779914000" expanded="false" signature="6:296" ph="..." />
+            <marker date="1550779914000" expanded="true" signature="442:976" ph="{...}" />
+            <marker date="1550779914000" expanded="true" signature="600:666" ph="{...}" />
+            <marker date="1550779914000" expanded="true" signature="762:970" ph="{...}" />
+            <marker date="1550779914000" expanded="true" signature="850:930" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EFCoreDatabaseFirstSample/Controllers/BooksMongoController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-75">
+          <caret line="24" column="34" lean-forward="true" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="34" />
+          <folding>
+            <marker date="1556554700301" expanded="false" signature="6:296" ph="..." />
+            <marker date="1556554700301" expanded="true" signature="447:2244" ph="{...}" />
+            <marker date="1556554700301" expanded="true" signature="610:676" ph="{...}" />
+            <marker date="1556554700301" expanded="true" signature="738:838" ph="{...}" />
+            <marker date="1556554700301" expanded="true" signature="934:1142" ph="{...}" />
+            <marker date="1556554700301" expanded="true" signature="1022:1102" ph="{...}" />
+            <marker date="1556554700301" expanded="true" signature="1255:1602" ph="{...}" />
+            <marker date="1556554700301" expanded="true" signature="1295:1375" ph="{...}" />
+            <marker date="1556554700301" expanded="true" signature="1413:1478" ph="{...}" />
+            <marker date="1556554700301" expanded="true" signature="1722:2238" ph="{...}" />
+            <marker date="1556554700301" expanded="true" signature="1762:1842" ph="{...}" />
+            <marker date="1556554700301" expanded="true" signature="1937:2036" ph="{...}" />
+            <marker date="1556554700301" expanded="true" signature="2074:2139" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EFCoreDatabaseFirstSample/Models/DataManager/BookDataManagerMongo.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="13" column="9" lean-forward="true" selection-start-line="13" selection-start-column="9" selection-end-line="13" selection-end-column="9" />
+          <folding>
+            <marker date="1556554159229" expanded="false" signature="6:169" ph="..." />
+            <marker date="1556554159229" expanded="true" signature="298:1680" ph="{...}" />
+            <marker date="1556554159229" expanded="true" signature="413:475" ph="{...}" />
+            <marker date="1556554159229" expanded="true" signature="518:654" ph="{...}" />
+            <marker date="1556554159229" expanded="true" signature="688:896" ph="{...}" />
+            <marker date="1556554159229" expanded="true" signature="936:1012" ph="{...}" />
+            <marker date="1556554159229" expanded="true" signature="1050:1126" ph="{...}" />
+            <marker date="1556554159229" expanded="true" signature="1188:1436" ph="{...}" />
+            <marker date="1556554159229" expanded="true" signature="1477:1674" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

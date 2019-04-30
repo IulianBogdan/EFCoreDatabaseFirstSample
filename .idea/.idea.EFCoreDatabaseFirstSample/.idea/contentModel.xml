@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\Admin\.Rider2018.1\system\resharper-host\local\Transient\ReSharperHost\v12\SolutionCaches\_EFCoreDatabaseFirstSample.-671314558.00" t="ExcludeRecursive" />
+    <e p="C:\Users\Admin\Desktop\ef-db-first-master\EFCoreDatabaseFirstSample" t="IncludeFlat">
+      <e p="EFCoreDatabaseFirstSample" t="IncludeRecursive">
+        <e p="appsettings.Development.json" t="Include" />
+        <e p="appsettings.json" t="Include" />
+        <e p="Bin" t="ExcludeRecursive" />
+        <e p="Controllers" t="Include">
+          <e p="AuthorsController.cs" t="Include" />
+          <e p="BooksController.cs" t="Include" />
+          <e p="BooksMongoController.cs" t="Include" />
+          <e p="PublishersController.cs" t="Include" />
+          <e p="ValuesController.cs" t="Include" />
+        </e>
+        <e p="EFCoreDatabaseFirstSample.csproj" t="IncludeRecursive" />
+        <e p="Models" t="Include">
+          <e p="Author.cs" t="Include" />
+          <e p="AuthorContact.cs" t="Include" />
+          <e p="Book.cs" t="Include" />
+          <e p="BookAuthors.cs" t="Include" />
+          <e p="BookCategory.cs" t="Include" />
+          <e p="BookStoreContext.cs" t="Include" />
+          <e p="DataManager" t="Include">
+            <e p="AuthorDataManager.cs" t="Include" />
+            <e p="BookDataManager.cs" t="Include" />
+            <e p="BookDataManagerMongo.cs" t="Include" />
+            <e p="PublisherDataManager.cs" t="Include" />
+          </e>
+          <e p="DTO" t="Include">
+            <e p="AuthorContactDTO.cs" t="Include" />
+            <e p="AuthorDTO.cs" t="Include" />
+            <e p="AuthorDTOMapper.cs" t="Include" />
+            <e p="BookDTO.cs" t="Include" />
+            <e p="PublisherDTO.cs" t="Include" />
+          </e>
+          <e p="IMongoContext.cs" t="Include" />
+          <e p="MongoContext.cs" t="Include" />
+          <e p="MongoSettings.cs" t="Include" />
+          <e p="Publisher.cs" t="Include" />
+          <e p="Repository" t="Include">
+            <e p="IDataRepository.cs" t="Include" />
+          </e>
+        </e>
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp2.2" t="Include">
+              <e p="EFCoreDatabaseFirstSample.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Program.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="launchSettings.json" t="Include" />
+        </e>
+        <e p="Startup.cs" t="Include" />
+      </e>
+      <e p="EFCoreDatabaseFirstSample.sln" t="IncludeFlat" />
+      <e p="packages" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>
