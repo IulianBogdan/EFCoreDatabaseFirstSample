@@ -5,6 +5,8 @@ namespace EFCoreDatabaseFirstSample.Models
 {
     public partial class Book
     {
+        internal IEnumerable<string> id;
+
         public Book()
         {
             BookAuthors = new HashSet<BookAuthors>();
