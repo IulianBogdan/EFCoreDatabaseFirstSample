@@ -18,12 +18,17 @@ namespace EFCoreDatabaseFirstSample
     {
         public static void Main(string[] args)
         {
+             MakeIndexAsync();
             CreateWebHostBuilder(args).Build().Run();
         }
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
                 .UseStartup<Startup>();
+        public static async Task MakeIndexAsync()
+        {
+             await new MongoDBController().CreateIndex();
+        }
     }
 }
 

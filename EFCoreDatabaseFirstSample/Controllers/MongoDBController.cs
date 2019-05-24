@@ -18,8 +18,18 @@ namespace EFCoreDatabaseFirstSample.Controllers
         static readonly string connectionString = "mongodb://localhost:27017";
         static MongoClient client = new MongoClient(connectionString);
         IMongoDatabase db = client.GetDatabase("DatabaseForNow");
+        
 
         public MongoDBController() {
+        }
+
+        public async Task CreateIndex()
+        {
+            var collection = db.GetCollection<Book>("Book");
+            var indexOptions = new CreateIndexOptions();
+            var indexKeys = Builders<Book>.IndexKeys.Ascending(book => book.Title);
+            var indexModel = new CreateIndexModel<Book>(indexKeys, indexOptions);
+            await collection.Indexes.CreateOneAsync(indexModel);
         }
 
         [Route("add")]
@@ -29,6 +39,16 @@ namespace EFCoreDatabaseFirstSample.Controllers
             var collection = db.GetCollection<BsonDocument>("Book");
             var document = book.ToBsonDocument();
             await collection.InsertOneAsync(document);
+        }
+
+        [Route("addAll")]
+        [HttpPost]
+        public async Task AddAll(List<Book> list)
+        {
+            var collection = db.GetCollection<BsonDocument>("Book");
+            var newList = new List<BsonDocument>();
+            list.ForEach(item =>  newList.Add(item.ToBsonDocument()));
+            await collection.InsertManyAsync(newList);
         }
 
         [Route("update")]
