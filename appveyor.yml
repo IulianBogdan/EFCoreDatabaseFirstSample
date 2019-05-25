@@ -26,6 +26,9 @@ for:
       only:
         - master
 
-build: off
+build:
+  project: EFCoreDatabaseFirstSample.sln
+  verbosity: quiet
+
 test: off #tests handled by cake script
 deploy: off #deploy handled by cake script
