@@ -26,6 +26,13 @@ for:
       only:
         - master
 
+before_build:
+  - nuget restore
+
+nuget:
+  account_feed: true
+  project_feed: false
+
 build:
   project: EFCoreDatabaseFirstSample.sln
   verbosity: quiet
