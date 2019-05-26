@@ -32,6 +32,7 @@ namespace EFCoreDatabaseFirstSample.Controllers
         [HttpGet("{id}")]
         public IActionResult Get(int id)
         {
+            Console.WriteLine("calllllllll");
             var book = _dataRepository.Get(id);
             if (book == null)
             {
