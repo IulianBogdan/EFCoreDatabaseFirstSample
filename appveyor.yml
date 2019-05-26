@@ -36,3 +36,5 @@ nuget:
 build:
   project: EFCoreDatabaseFirstSample.sln
   verbosity: quiet
+  test_script:
+    - vstest.console /logger:Appveyor Tests
