@@ -28,7 +28,12 @@ for:
 
 before_build:
   - nuget restore
-
+  
+cache:
+  - packages -> **\packages.config
+  - '%LocalAppData%\NuGet\Cache' 
+  - '%LocalAppData%\NuGet\v3-cache'
+  
 nuget:
   account_feed: true
   project_feed: false
@@ -36,6 +41,3 @@ nuget:
 build:
   project: EFCoreDatabaseFirstSample.sln
   verbosity: quiet
-  
-test_script:
-    - vstest.console /logger:Appveyor Tests
