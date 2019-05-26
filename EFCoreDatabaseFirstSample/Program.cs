@@ -18,7 +18,7 @@ namespace EFCoreDatabaseFirstSample
     {
         public static void Main(string[] args)
         {
-             MakeIndexAsync();
+            Task.WaitAll(MakeIndexAsync());
             CreateWebHostBuilder(args).Build().Run();
         }
 
