@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace EFCoreDatabaseFirstSample.Models
 {
@@ -6,12 +7,13 @@ namespace EFCoreDatabaseFirstSample.Models
     {
         public Publisher()
         {
-            Books = new HashSet<Book>();
+            Book = new HashSet<Book>();
         }
 
-        public long Id { get; set; }
+        public int Id { get; set; }
         public string Name { get; set; }
+        public int? Pid { get; set; }
 
-        public virtual ICollection<Book> Books { get; set; }
+        public virtual ICollection<Book> Book { get; set; }
     }
 }

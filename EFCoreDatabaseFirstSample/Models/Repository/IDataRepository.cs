@@ -1,14 +1,14 @@
 ﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace EFCoreDatabaseFirstSample.Models.Repository
 {
-    public interface IDataRepository<TEntity, out TDto>
+    public interface IDataRepository<TEntity>
     {
         IEnumerable<TEntity> GetAll();
-        TEntity Get(long id);
-        TDto GetDto(long id);
-        void Add(TEntity entity);
-        void Update(TEntity entityToUpdate, TEntity entity);
-        void Delete(TEntity entity);
+        TEntity Get(int id);
+        Task<string> Add(TEntity entity);
+        Task<string> Update(TEntity entity);
+        Task<string> Delete(int id);
     }
 }

@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using EFCoreDatabaseFirstSample.Models;
-using EFCoreDatabaseFirstSample.Models.DTO;
 using EFCoreDatabaseFirstSample.Models.Repository;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EFCoreDatabaseFirstSample.Controllers
@@ -14,13 +9,13 @@ namespace EFCoreDatabaseFirstSample.Controllers
     [ApiController]
     public class BooksMongoController : ControllerBase
     {
-        private readonly IDataRepository<Book, BookDto> _dataRepository;
+        private readonly IDataRepository<Book> _dataRepository;
 
-        public BooksMongoController(IDataRepository<Book, BookDto> dataRepository)
+        public BooksMongoController(IDataRepository<Book> dataRepository)
         {
             _dataRepository = dataRepository;
         }
-        
+
         [HttpGet]
         public IActionResult Get()
         {
@@ -41,7 +36,7 @@ namespace EFCoreDatabaseFirstSample.Controllers
 
             return Ok(book);
         }
-        
+
         // POST: api/Authors
         [HttpPost]
         public IActionResult Post([FromBody] Book book)
@@ -80,7 +75,7 @@ namespace EFCoreDatabaseFirstSample.Controllers
                 return BadRequest();
             }
 
-            _dataRepository.Update(bookToUpdate, book);
+            _dataRepository.Update(book);
             return NoContent();
         }
     }

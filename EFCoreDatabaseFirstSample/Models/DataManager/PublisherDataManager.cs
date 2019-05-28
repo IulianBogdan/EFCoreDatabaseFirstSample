@@ -1,12 +1,12 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using EFCoreDatabaseFirstSample.Models.DTO;
+using System.Threading.Tasks;
 using EFCoreDatabaseFirstSample.Models.Repository;
 using Microsoft.EntityFrameworkCore;
 
 namespace EFCoreDatabaseFirstSample.Models.DataManager
 {
-    public class PublisherDataManager : IDataRepository<Publisher, PublisherDto>
+    public class PublisherDataManager : IDataRepository<Publisher>
     {
         readonly BookStoreContext _bookStoreContext;
 
@@ -17,35 +17,60 @@ namespace EFCoreDatabaseFirstSample.Models.DataManager
 
         public IEnumerable<Publisher> GetAll()
         {
-            throw new System.NotImplementedException();
+            return _bookStoreContext.Publisher.ToList();
         }
 
-        public Publisher Get(long id)
+        public Publisher Get(int id)
         {
-            return _bookStoreContext.Publisher
-                .Include(a => a.Books)
-                .Single(b => b.Id == id);
+            var publisher = _bookStoreContext.Publisher
+                .SingleOrDefault(a => a.Id == id);
+
+            return publisher ?? null;
         }
 
-        public PublisherDto GetDto(long id)
+        public async Task<string> Add(Publisher entity)
         {
-            throw new System.NotImplementedException();
+            _bookStoreContext.Add(entity);
+            if (await _bookStoreContext.SaveChangesAsync() > 0)
+            {
+                return "Added";
+            }
+
+            return "There was a problem while adding the Publisher";
         }
 
-        public void Add(Publisher entity)
+        public async Task<string> Update(Publisher entity)
         {
-            throw new System.NotImplementedException();
+            var id = Get(entity.Id);
+            if (id == null)
+            {
+                return "Publisher not found";
+            }
+
+            _bookStoreContext.Update(entity);
+            if (await _bookStoreContext.SaveChangesAsync() > 0)
+            {
+                return "Updated";
+            }
+
+            return "There has been an error during update";
         }
 
-        public void Update(Publisher entityToUpdate, Publisher entity)
+        public async Task<string> Delete(int id)
         {
-            throw new System.NotImplementedException();
-        }
+            var exists = Get(id);
+            if (exists == null)
+            {
+                return "The Publisher does not exist in the database";
+            }
 
-        public void Delete(Publisher entity)
-        {
-            _bookStoreContext.Remove(entity);
-            _bookStoreContext.SaveChanges();
+            _bookStoreContext.Publisher.Remove(exists);
+            if (await _bookStoreContext.SaveChangesAsync() > 0)
+            {
+                return "Deleted";
+            }
+            
+            return "There has been an error during update";
         }
     }
 }

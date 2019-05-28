@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using EFCoreDatabaseFirstSample.Models;
-using EFCoreDatabaseFirstSample.Models.DTO;
 using EFCoreDatabaseFirstSample.Models.Repository;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -14,14 +10,13 @@ namespace EFCoreDatabaseFirstSample.Controllers
     [ApiController]
     public class AuthorsController : ControllerBase
     {
-        private readonly IDataRepository<Author, AuthorDto> _dataRepository;
+        private readonly IDataRepository<Author> _dataRepository;
 
-        public AuthorsController(IDataRepository<Author, AuthorDto> dataRepository)
+        public AuthorsController(IDataRepository<Author> dataRepository)
         {
             _dataRepository = dataRepository;
         }
 
-        // GET: api/Authors
         [HttpGet]
         public IActionResult Get()
         {
@@ -29,11 +24,12 @@ namespace EFCoreDatabaseFirstSample.Controllers
             return Ok(authors);
         }
 
-        // GET: api/Authors/5
-        [HttpGet("{id}", Name = "GetAuthor")]
-        public IActionResult Get(int id)
+        [HttpGet("{id}")]
+        [ProducesResponseType(typeof(Publisher), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public IActionResult GetById(int id)
         {
-            var author = _dataRepository.GetDto(id);
+            var author = _dataRepository.Get(id);
             if (author == null)
             {
                 return NotFound("Author not found.");
@@ -41,47 +37,57 @@ namespace EFCoreDatabaseFirstSample.Controllers
 
             return Ok(author);
         }
-
-        // POST: api/Authors
+        
         [HttpPost]
-        public IActionResult Post([FromBody] Author author)
-        {
-            if (author is null)
-            {
-                return BadRequest("Author is null.");
-            }
-
-            if (!ModelState.IsValid)
-            {
-                return BadRequest();
-            }
-
-            _dataRepository.Add(author);
-            return CreatedAtRoute("GetAuthor", new { Id = author.Id }, null);
-        }
-
-        // PUT: api/Authors/5
-        [HttpPut("{id}")]
-        public IActionResult Put(int id, [FromBody] Author author)
+        [ProducesResponseType(typeof(Author), StatusCodes.Status201Created)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public async Task<IActionResult> AddAuthor(Author author)
         {
             if (author == null)
             {
-                return BadRequest("Author is null.");
-            }
-
-            var authorToUpdate = _dataRepository.Get(id);
-            if (authorToUpdate == null)
-            {
-                return NotFound("The Employee record couldn't be found.");
-            }
-
-            if (!ModelState.IsValid)
-            {
                 return BadRequest();
             }
+            await _dataRepository.Add(author);
+            
+            return CreatedAtRoute(nameof(GetById), new { id = author.Id }, author);
+        }
 
-            _dataRepository.Update(authorToUpdate, author);
-            return NoContent();
+        [HttpPost]
+        [ProducesResponseType(typeof(Author), StatusCodes.Status202Accepted)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public async Task<IActionResult> UpdateAuthor(Author author)
+        {
+            if (author == null)
+            {
+                return BadRequest("Book cannot be null");
+            }
+
+            var result = await _dataRepository.Update(author);
+            if (result != "Updated")
+            {
+                return BadRequest(result);
+            }
+            
+            return CreatedAtRoute(nameof(GetById), new { id = author.Id }, author);
+        }
+
+        [HttpPost]
+        [ProducesResponseType(typeof(Author), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public async Task<IActionResult> DeleteAuthor(int id)
+        {
+            if (id == null)
+            {
+                return BadRequest("Id cannot be null");
+            }
+
+            var result = await _dataRepository.Delete(id);
+            if (result != "Deleted")
+            {
+                return BadRequest(result);
+            }
+
+            return Ok(result);
         }
     }
 }
