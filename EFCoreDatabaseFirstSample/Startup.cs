@@ -4,7 +4,6 @@ using System.Linq;
 using System.Threading.Tasks;
 using EFCoreDatabaseFirstSample.Models;
 using EFCoreDatabaseFirstSample.Models.DataManager;
-using EFCoreDatabaseFirstSample.Models.DTO;
 using EFCoreDatabaseFirstSample.Models.Repository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -31,15 +30,15 @@ namespace EFCoreDatabaseFirstSample
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<BookStoreContext>(opts => opts.UseSqlServer(Configuration["ConnectionString:BooksDB"]));
-            services.AddScoped<IDataRepository<Author, AuthorDto>, AuthorDataManager>();
-            services.AddScoped<IDataRepository<Book, BookDto>, BookDataManager>();
-            services.AddScoped<IDataRepository< Publisher, PublisherDto>, PublisherDataManager>();
+            services.AddScoped<IDataRepository<Author>, AuthorDataManager>();
+            services.AddScoped<IDataRepository<Book>, BookDataManager>();
+            services.AddScoped<IDataRepository<Publisher>, PublisherDataManager>();
 
             services.AddMvc()
                 .AddJsonOptions(
                     options => options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
                 ).SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
-            
+
             services.Configure<MongoSettings>(
                 options =>
                 {

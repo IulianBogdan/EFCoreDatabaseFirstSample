@@ -27,7 +27,7 @@ namespace EFCoreDatabaseFirstSample
                 .UseStartup<Startup>();
         public static async Task MakeIndexAsync()
         {
-             await new MongoDBController().CreateIndex();
+            await new MongoDBController().CreateIndex();
         }
     }
 }

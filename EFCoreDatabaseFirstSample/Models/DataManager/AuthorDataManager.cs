@@ -1,12 +1,12 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using EFCoreDatabaseFirstSample.Models.DTO;
+using System.Threading.Tasks;
 using EFCoreDatabaseFirstSample.Models.Repository;
 using Microsoft.EntityFrameworkCore;
 
 namespace EFCoreDatabaseFirstSample.Models.DataManager
 {
-    public class AuthorDataManager : IDataRepository<Author, AuthorDto>
+    public class AuthorDataManager : IDataRepository<Author>
     {
         private readonly BookStoreContext _bookStoreContext;
 
@@ -17,70 +17,60 @@ namespace EFCoreDatabaseFirstSample.Models.DataManager
 
         public IEnumerable<Author> GetAll()
         {
-            return _bookStoreContext.Author
-                .Include(author => author.AuthorContact)
-                .ToList();
+            return _bookStoreContext.Author.ToList();
         }
 
-        public Author Get(long id)
+        public Author Get(int id)
         {
             var author = _bookStoreContext.Author
-                .SingleOrDefault(b => b.Id == id);
+                .SingleOrDefault(a => a.Id == id);
 
-            return author;
+            return author ?? null;
         }
 
-        public AuthorDto GetDto(long id)
+        public async Task<string> Add(Author entity)
         {
-            _bookStoreContext.ChangeTracker.LazyLoadingEnabled = true;
-
-            using (var context = new BookStoreContext())
+            _bookStoreContext.Add(entity);
+            if (await _bookStoreContext.SaveChangesAsync() > 0)
             {
-                var author = context.Author
-                    .SingleOrDefault(b => b.Id == id);
-
-                return AuthorDtoMapper.MapToDto(author);
-            }
-        }
-
-
-        public void Add(Author entity)
-        {
-            _bookStoreContext.Author.Add(entity);
-            _bookStoreContext.SaveChanges();
-        }
-
-        public void Update(Author entityToUpdate, Author entity)
-        {
-            entityToUpdate = _bookStoreContext.Author
-                .Include(a => a.BookAuthors)
-                .Include(a => a.AuthorContact)
-                .Single(b => b.Id == entityToUpdate.Id);
-
-            entityToUpdate.Name = entity.Name;
-
-            entityToUpdate.AuthorContact.Address = entity.AuthorContact.Address;
-            entityToUpdate.AuthorContact.ContactNumber = entity.AuthorContact.ContactNumber;
-
-            var deletedBooks = entityToUpdate.BookAuthors.Except(entity.BookAuthors).ToList();
-            var addedBooks = entity.BookAuthors.Except(entityToUpdate.BookAuthors).ToList();
-
-            deletedBooks.ForEach(bookToDelete =>
-                entityToUpdate.BookAuthors.Remove(
-                    entityToUpdate.BookAuthors
-                        .First(b => b.BookId == bookToDelete.BookId)));
-
-            foreach (var addedBook in addedBooks)
-            {
-                _bookStoreContext.Entry(addedBook).State = EntityState.Added;
+                return "Added";
             }
 
-            _bookStoreContext.SaveChanges();
+            return "There was a problem while adding the author";
         }
 
-        public void Delete(Author entity)
+        public async Task<string> Update(Author entity)
         {
-            throw new System.NotImplementedException();
+            var id = Get(entity.Id);
+            if (id == null)
+            {
+                return "Book not found";
+            }
+
+            _bookStoreContext.Update(entity);
+            if (await _bookStoreContext.SaveChangesAsync() > 0)
+            {
+                return "Updated";
+            }
+
+            return "There has been an error during update";
+        }
+
+        public async Task<string> Delete(int id)
+        {
+            var exists = Get(id);
+            if (exists == null)
+            {
+                return "The author does not exist in the database";
+            }
+
+            _bookStoreContext.Author.Remove(exists);
+            if (await _bookStoreContext.SaveChangesAsync() > 0)
+            {
+                return "Deleted";
+            }
+            
+            return "There has been an error during update";
         }
     }
 }

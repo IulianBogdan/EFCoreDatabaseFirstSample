@@ -13,11 +13,12 @@ namespace EFCoreDatabaseFirstSample.Models
             _db = client.GetDatabase(options.Value.Database);
         }
         
-        public IMongoCollection<Author> Authors { get; }
-        public IMongoCollection<AuthorContact> AuthorsContact { get; }
-        public IMongoCollection<Book> Books { get; }
-        public IMongoCollection<BookAuthors> BookAuthors { get; }
-        public IMongoCollection<Publisher> Publishers { get; }
-        public IMongoCollection<BookCategory> BookCategories { get; }
+        public IMongoCollection<Address> Address { get; set; }
+        public IMongoCollection<Author> Author { get; set; }
+        public IMongoCollection<AuthorContact> AuthorContact { get; set; }
+        public IMongoCollection<Book> Book { get; set; }
+        public IMongoCollection<BookAuthors> BookAuthors { get; set; }
+        public IMongoCollection<BookCategory> BookCategory { get; set; }
+        public IMongoCollection<Publisher> Publisher { get; set; }
     }
 }

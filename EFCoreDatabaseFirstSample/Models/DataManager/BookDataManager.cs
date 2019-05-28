@@ -1,11 +1,11 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using EFCoreDatabaseFirstSample.Models.DTO;
+using System.Threading.Tasks;
 using EFCoreDatabaseFirstSample.Models.Repository;
 
 namespace EFCoreDatabaseFirstSample.Models.DataManager
 {
-    public class BookDataManager : IDataRepository<Book, BookDto>
+    public class BookDataManager : IDataRepository<Book>
     {
         readonly BookStoreContext _bookStoreContext;
 
@@ -16,50 +16,60 @@ namespace EFCoreDatabaseFirstSample.Models.DataManager
 
         public IEnumerable<Book> GetAll()
         {
-            throw new System.NotImplementedException();
+            return _bookStoreContext.Book.ToList();
         }
-        
-        public Book Get(long id)
-        {
-            _bookStoreContext.ChangeTracker.LazyLoadingEnabled = false;
 
+        public Book Get(int id)
+        {
             var book = _bookStoreContext.Book
                 .SingleOrDefault(b => b.Id == id);
 
-            if (book == null)
+            return book ?? null;
+        }
+
+        public async Task<string> Add(Book entity)
+        {
+            _bookStoreContext.Add(entity);
+            if (await _bookStoreContext.SaveChangesAsync() > 0)
             {
-                return null;
+                return "Added";
             }
 
-            _bookStoreContext.Entry(book)
-                .Collection(b => b.BookAuthors)
-                .Load();
+            return "There was a problem while adding the book";
+        }
 
-            _bookStoreContext.Entry(book)
-                .Reference(b => b.Publisher)
-                .Load();
+        public async Task<string> Update(Book entity)
+        {
+            var id = Get(entity.Id);
+            if (id == null)
+            {
+                return "Book not found";
+            }
+
+            _bookStoreContext.Update(entity);
+            if (await _bookStoreContext.SaveChangesAsync() > 0)
+            {
+                return "Updated";
+            }
+
+            return "There has been an error during update";
+        }
+
+        public async Task<string> Delete(int id)
+        {
+            var exists = Get(id);
+            if (exists == null)
+            {
+                return "The book does not exist in the database";
+            }
+
+            _bookStoreContext.Book.Remove(exists);
+            if (await _bookStoreContext.SaveChangesAsync() > 0)
+            {
+                return "Deleted";
+            }
             
-            return book;
-        }
-
-        public BookDto GetDto(long id)
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public void Add(Book entity)
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public void Update(Book entityToUpdate, Book entity)
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public void Delete(Book entity)
-        {
-            throw new System.NotImplementedException();
+            return "There has been an error during update";
         }
     }
 }

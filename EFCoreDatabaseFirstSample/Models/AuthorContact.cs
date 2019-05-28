@@ -5,10 +5,17 @@ namespace EFCoreDatabaseFirstSample.Models
 {
     public partial class AuthorContact
     {
-        public long AuthorId { get; set; }
-        public string ContactNumber { get; set; }
-        public string Address { get; set; }
+        public AuthorContact()
+        {
+            Author = new HashSet<Author>();
+        }
 
-        public virtual Author Author { get; set; }
+        public int AuthorContactId { get; set; }
+        public decimal? PhoneNumber { get; set; }
+        public string Email { get; set; }
+        public int? AddressId { get; set; }
+
+        public virtual Address Address { get; set; }
+        public virtual ICollection<Author> Author { get; set; }
     }
 }

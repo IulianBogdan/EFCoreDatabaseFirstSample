@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using EFCoreDatabaseFirstSample.Models;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization;
@@ -18,9 +15,10 @@ namespace EFCoreDatabaseFirstSample.Controllers
         static readonly string connectionString = "mongodb://localhost:27017";
         static MongoClient client = new MongoClient(connectionString);
         IMongoDatabase db = client.GetDatabase("DatabaseForNow");
-        
 
-        public MongoDBController() {
+
+        public MongoDBController()
+        {
         }
 
         public async Task CreateIndex()
@@ -47,27 +45,27 @@ namespace EFCoreDatabaseFirstSample.Controllers
         {
             var collection = db.GetCollection<BsonDocument>("Book");
             var newList = new List<BsonDocument>();
-            list.ForEach(item =>  newList.Add(item.ToBsonDocument()));
+            list.ForEach(item => newList.Add(item.ToBsonDocument()));
             await collection.InsertManyAsync(newList);
         }
 
         [Route("update")]
         [HttpPut]
-        public  OkResult UpdateBook(Book book)
+        public OkResult UpdateBook(Book book)
         {
             var collection = db.GetCollection<BsonDocument>("Book");
             var document = book.ToBsonDocument();
-            BsonDocument filter = new BsonDocument{ { "_id", book.Id } };
-            ReplaceOneResult x = collection.ReplaceOne(filter,  document);
+            BsonDocument filter = new BsonDocument { { "_id", book.Id } };
+            ReplaceOneResult x = collection.ReplaceOne(filter, document);
             return Ok();
         }
 
         [Route("remove")]
         [HttpDelete]
-        public  OkResult DeleteBook(int id)
+        public OkResult DeleteBook(int id)
         {
             var collection = db.GetCollection<BsonDocument>("Book");
-            BsonDocument filter = new BsonDocument { { "_id", id} };
+            BsonDocument filter = new BsonDocument { { "_id", id } };
             collection.DeleteOne(filter);
             return Ok();
         }
@@ -84,7 +82,7 @@ namespace EFCoreDatabaseFirstSample.Controllers
 
         [Route("getAll")]
         [HttpGet]
-        public  List<Book> Get()
+        public List<Book> Get()
         {
             var collection = db.GetCollection<BsonDocument>("Book");
             var list = new List<Book>();

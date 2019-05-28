@@ -10,8 +10,9 @@ namespace EFCoreDatabaseFirstSample.Models
             Book = new HashSet<Book>();
         }
 
-        public long Id { get; set; }
+        public int Id { get; set; }
         public string Name { get; set; }
+        public string CategoryDescription { get; set; }
 
         public virtual ICollection<Book> Book { get; set; }
     }

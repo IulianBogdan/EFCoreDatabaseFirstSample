@@ -4,11 +4,12 @@ namespace EFCoreDatabaseFirstSample.Models
 {
     public interface IMongoContext
     {
-        IMongoCollection<Author> Authors { get; }
-        IMongoCollection<AuthorContact> AuthorsContact { get; }
-        IMongoCollection<Book> Books { get; }
-        IMongoCollection<BookAuthors> BookAuthors { get; }
-        IMongoCollection<Publisher> Publishers { get; }
-        IMongoCollection<BookCategory> BookCategories { get; }
+        IMongoCollection<Address> Address { get; set; }
+        IMongoCollection<Author> Author { get; set; }
+        IMongoCollection<AuthorContact> AuthorContact { get; set; }
+        IMongoCollection<Book> Book { get; set; }
+        IMongoCollection<BookAuthors> BookAuthors { get; set; }
+        IMongoCollection<BookCategory> BookCategory { get; set; }
+        IMongoCollection<Publisher> Publisher { get; set; }
     }
 }
