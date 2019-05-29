@@ -2,6 +2,7 @@
 using System.Linq;
 using System.Threading.Tasks;
 using EFCoreDatabaseFirstSample.Models.Repository;
+using Microsoft.EntityFrameworkCore;
 
 namespace EFCoreDatabaseFirstSample.Models.DataManager
 {
@@ -27,6 +28,16 @@ namespace EFCoreDatabaseFirstSample.Models.DataManager
             return book ?? null;
         }
 
+        // stored procedure SelectBooksFromFictionCategory
+        public List<Book> GetFictionBooks()
+        {
+            var fictionBooks = _bookStoreContext.Book
+                .FromSql("EXECUTE SelectBooksFromFictionaryCategory")
+                .ToList();
+
+            return fictionBooks;
+        }
+
         public async Task<string> Add(Book entity)
         {
             _bookStoreContext.Add(entity);
@@ -38,6 +49,7 @@ namespace EFCoreDatabaseFirstSample.Models.DataManager
             return "There was a problem while adding the book";
         }
 
+        // stored procedure update_with_lock
         public async Task<string> Update(Book entity)
         {
             var id = Get(entity.Id);
@@ -46,8 +58,10 @@ namespace EFCoreDatabaseFirstSample.Models.DataManager
                 return "Book not found";
             }
 
-            _bookStoreContext.Update(entity);
-            if (await _bookStoreContext.SaveChangesAsync() > 0)
+            var result = await _bookStoreContext.Database.ExecuteSqlCommandAsync("EXECUTE dbo.update_with_lock {0} {1} {2} {3} {4} {5} {6}",
+                entity.Id, entity.Title, entity.CategoryId, entity.PublisherId, entity.Isbn, entity.PublicationYear, entity.Summary);
+
+            if (result > 0)
             {
                 return "Updated";
             }

@@ -15,9 +15,12 @@ namespace EFCoreDatabaseFirstSample.Models.DataManager
             _bookStoreContext = storeContext;
         }
 
+        // stored procedure SelectAllPublishers
         public IEnumerable<Publisher> GetAll()
         {
-            return _bookStoreContext.Publisher.ToList();
+            return _bookStoreContext.Publisher
+                .FromSql("EXECUTE dbo.SelectAllPublishers")
+                .ToList();
         }
 
         public Publisher Get(int id)
