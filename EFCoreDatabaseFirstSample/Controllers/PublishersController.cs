@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace EFCoreDatabaseFirstSample.Controllers
 {
-    [Route("api/publishers")]
+    [Route("api/sql/publishers")]
     [ApiController]
     public class PublishersController : ControllerBase
     {

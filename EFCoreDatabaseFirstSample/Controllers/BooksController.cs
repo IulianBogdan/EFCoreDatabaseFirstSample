@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace EFCoreDatabaseFirstSample.Controllers
 {
-    [Route("api/booksSQL")]
+    [Route("api/sql/books")]
     [ApiController]
     public class BooksController : ControllerBase
     {
@@ -18,7 +18,7 @@ namespace EFCoreDatabaseFirstSample.Controllers
             _dataRepository = dataRepository;
         }
 
-        // GET: api/booksSQL/5
+        // GET: api/sql/books/5
         [HttpGet("{id}")]
         [ProducesResponseType(typeof(Book), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -33,7 +33,7 @@ namespace EFCoreDatabaseFirstSample.Controllers
             return Ok(book);
         }
 
-        // GET: api/booksSQL/GetAll
+        // GET: api/sql/books/GetAll
         [HttpGet]
         [Route("[action]")]
         [ProducesResponseType(typeof(IEnumerable<Book>), StatusCodes.Status200OK)]
@@ -44,7 +44,7 @@ namespace EFCoreDatabaseFirstSample.Controllers
             return Ok(books);
         }
 
-        // POST: api/booksSQL/AddBook
+        // POST: api/sql/books/AddBook
         [HttpPost]
         [Route("[action]")]
         [ProducesResponseType(typeof(Book), StatusCodes.Status201Created)]
@@ -60,7 +60,7 @@ namespace EFCoreDatabaseFirstSample.Controllers
             return CreatedAtRoute(nameof(GetById), new { id = book.Id }, book);
         }
 
-        // POST: api/booksSQL/UpdateBook
+        // POST: api/sql/books/UpdateBook
         [HttpPost]
         [Route("[action]")]
         [ProducesResponseType(typeof(Book), StatusCodes.Status202Accepted)]
@@ -81,7 +81,7 @@ namespace EFCoreDatabaseFirstSample.Controllers
             return CreatedAtRoute(nameof(GetById), new { id = book.Id }, book);
         }
 
-        // POST: api/booksSQL/DeleteBook
+        // POST: api/sql/books/DeleteBook
         [HttpPost]
         [Route("[action]")]
         [ProducesResponseType(typeof(Book), StatusCodes.Status200OK)]
