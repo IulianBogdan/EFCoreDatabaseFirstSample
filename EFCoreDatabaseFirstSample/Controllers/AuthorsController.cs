@@ -25,7 +25,7 @@ namespace EFCoreDatabaseFirstSample.Controllers
         }
 
         [HttpGet("{id}")]
-        [ProducesResponseType(typeof(Publisher), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(Author), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public IActionResult GetById(int id)
         {
@@ -59,7 +59,7 @@ namespace EFCoreDatabaseFirstSample.Controllers
         {
             if (author == null)
             {
-                return BadRequest("Book cannot be null");
+                return BadRequest("Author cannot be null");
             }
 
             var result = await _dataRepository.Update(author);
