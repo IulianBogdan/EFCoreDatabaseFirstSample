@@ -72,5 +72,10 @@ namespace EFCoreDatabaseFirstSample.Models.DataManager
             
             return "There has been an error during update";
         }
+
+        public IEnumerable<Author> GetFictionBooks()
+        {
+            return null;
+        }
     }
 }

@@ -10,5 +10,6 @@ namespace EFCoreDatabaseFirstSample.Models.Repository
         Task<string> Add(TEntity entity);
         Task<string> Update(TEntity entity);
         Task<string> Delete(int id);
+        IEnumerable<TEntity> GetFictionBooks();
     }
 }

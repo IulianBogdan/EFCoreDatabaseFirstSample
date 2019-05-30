@@ -44,6 +44,17 @@ namespace EFCoreDatabaseFirstSample.Controllers
             return Ok(books);
         }
 
+        // GET: api/sql/books/GetFictionBooks
+        [HttpGet]
+        [Route("[action]")]
+        [ProducesResponseType(typeof(IEnumerable<Book>), StatusCodes.Status200OK)]
+        public IActionResult GetFictionBooks()
+        {
+            var books = _dataRepository.GetFictionBooks();
+
+            return Ok(books);
+        }
+
         // POST: api/sql/books/AddBook
         [HttpPost]
         [Route("[action]")]

@@ -71,5 +71,10 @@ namespace EFCoreDatabaseFirstSample.Models.DataManager
 
             return "There has been an error during deletion";
         }
+
+        public IEnumerable<BookCategory> GetFictionBooks()
+        {
+            return null;
+        }
     }
 }

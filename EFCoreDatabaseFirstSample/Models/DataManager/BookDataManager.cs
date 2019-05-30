@@ -29,10 +29,10 @@ namespace EFCoreDatabaseFirstSample.Models.DataManager
         }
 
         // stored procedure SelectBooksFromFictionCategory
-        public List<Book> GetFictionBooks()
+        public IEnumerable<Book> GetFictionBooks()
         {
             var fictionBooks = _bookStoreContext.Book
-                .FromSql("EXECUTE SelectBooksFromFictionaryCategory")
+                .FromSql("EXECUTE SelectBooksFromFictionCategory")
                 .ToList();
 
             return fictionBooks;
