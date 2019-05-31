@@ -18,10 +18,11 @@ namespace EFCoreDatabaseFirstSample.Controllers
             _dataRepository = dataRepository;
         }
 
-        [HttpGet("{id}")]
+        [HttpGet]
+        [Route("[action]/{id:int}", Name = "GetCategoriesById")]
         [ProducesResponseType(typeof(BookCategory), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public IActionResult GetById(int id)
+        public IActionResult GetCategoriesById(int id)
         {
             var category = _dataRepository.Get(id);
             if (category == null)
@@ -54,7 +55,7 @@ namespace EFCoreDatabaseFirstSample.Controllers
             }
             await _dataRepository.Add(category);
 
-            return CreatedAtRoute(nameof(GetById), new { id = category.Id }, category);
+            return CreatedAtRoute("GetCategoriesById", new { id = category.Id }, category);
         }
 
         [HttpPost]
@@ -74,11 +75,11 @@ namespace EFCoreDatabaseFirstSample.Controllers
                 return BadRequest(result);
             }
 
-            return CreatedAtRoute(nameof(GetById), new { id = category.Id }, category);
+            return CreatedAtRoute("GetCategoriesById", new { id = category.Id }, category);
         }
 
         [HttpPost]
-        [Route("[action]")]
+        [Route("[action]/{id:int}")]
         [ProducesResponseType(typeof(BookCategory), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<IActionResult> DeleteCategory(int id)

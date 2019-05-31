@@ -44,11 +44,13 @@ namespace EFCoreDatabaseFirstSample.Models.DataManager
             var id = Get(entity.Id);
             if (id == null)
             {
-                return "Book not found";
+                return "Author not found";
             }
 
-            _bookStoreContext.Update(entity);
-            if (await _bookStoreContext.SaveChangesAsync() > 0)
+            var result = await _bookStoreContext.Database.ExecuteSqlCommandAsync("EXECUTE dbo.update_author_deadlock @p0, @p1",
+                entity.Id, entity.Name);
+
+            if (result > 0)
             {
                 return "Updated";
             }

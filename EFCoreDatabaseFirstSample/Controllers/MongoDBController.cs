@@ -12,7 +12,7 @@ namespace EFCoreDatabaseFirstSample.Controllers
     [ApiController]
     public class MongoDBController : ControllerBase
     {
-        static readonly string connectionString = "mongodb://localhost:27017";
+        static readonly string connectionString = "mongodb://root:example@localhost:27017";
         static MongoClient client = new MongoClient(connectionString);
         IMongoDatabase db = client.GetDatabase("DatabaseForNow");
 

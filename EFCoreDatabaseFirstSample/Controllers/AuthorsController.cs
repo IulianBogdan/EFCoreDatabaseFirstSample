@@ -18,16 +18,18 @@ namespace EFCoreDatabaseFirstSample.Controllers
         }
 
         [HttpGet]
+        [Route("[action]")]
         public IActionResult Get()
         {
             var authors = _dataRepository.GetAll();
             return Ok(authors);
         }
 
-        [HttpGet("{id}")]
+        [HttpGet]
+        [Route("[action]/{id:int}", Name = "GetAuthorsById")]
         [ProducesResponseType(typeof(Author), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public IActionResult GetById(int id)
+        public IActionResult GetAuthorsById(int id)
         {
             var author = _dataRepository.Get(id);
             if (author == null)
@@ -39,6 +41,7 @@ namespace EFCoreDatabaseFirstSample.Controllers
         }
         
         [HttpPost]
+        [Route("[action]")]
         [ProducesResponseType(typeof(Author), StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<IActionResult> AddAuthor(Author author)
@@ -49,10 +52,11 @@ namespace EFCoreDatabaseFirstSample.Controllers
             }
             await _dataRepository.Add(author);
             
-            return CreatedAtRoute(nameof(GetById), new { id = author.Id }, author);
+            return CreatedAtRoute("GetAuthorsById", new { id = author.Id }, author);
         }
 
         [HttpPost]
+        [Route("[action]")]
         [ProducesResponseType(typeof(Author), StatusCodes.Status202Accepted)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<IActionResult> UpdateAuthor(Author author)
@@ -68,10 +72,11 @@ namespace EFCoreDatabaseFirstSample.Controllers
                 return BadRequest(result);
             }
             
-            return CreatedAtRoute(nameof(GetById), new { id = author.Id }, author);
+            return CreatedAtRoute("GetAuthorsById", new { id = author.Id }, author);
         }
 
         [HttpPost]
+        [Route("[action]/{id:int}")]
         [ProducesResponseType(typeof(Author), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<IActionResult> DeleteAuthor(int id)

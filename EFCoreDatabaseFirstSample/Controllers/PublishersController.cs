@@ -24,10 +24,11 @@ namespace EFCoreDatabaseFirstSample.Controllers
             return Ok(authors);
         }
 
-        [HttpGet("{id}")]
+        [HttpGet]
+        [Route("[action]/{id:int}", Name = "GetPublishersById")]
         [ProducesResponseType(typeof(Publisher), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public IActionResult GetById(int id)
+        public IActionResult GetPublishersById(int id)
         {
             var publisher = _dataRepository.Get(id);
             if (publisher == null)
@@ -39,6 +40,7 @@ namespace EFCoreDatabaseFirstSample.Controllers
         }
         
         [HttpPost]
+        [Route("[action]")]
         [ProducesResponseType(typeof(Publisher), StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<IActionResult> AddPublisher(Publisher publisher)
@@ -49,10 +51,11 @@ namespace EFCoreDatabaseFirstSample.Controllers
             }
             await _dataRepository.Add(publisher);
             
-            return CreatedAtRoute(nameof(GetById), new { id = publisher.Id }, publisher);
+            return CreatedAtRoute("GetPublishersById", new { id = publisher.Id }, publisher);
         }
 
         [HttpPost]
+        [Route("[action]")]
         [ProducesResponseType(typeof(Publisher), StatusCodes.Status202Accepted)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<IActionResult> UpdatePublisher(Publisher publisher)
@@ -68,10 +71,11 @@ namespace EFCoreDatabaseFirstSample.Controllers
                 return BadRequest(result);
             }
             
-            return CreatedAtRoute(nameof(GetById), new { id = publisher.Id }, publisher);
+            return CreatedAtRoute("GetPublishersById", new { id = publisher.Id }, publisher);
         }
 
         [HttpPost]
+        [Route("[action]/{id:int}")]
         [ProducesResponseType(typeof(Author), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<IActionResult> DeletePublisher(int id)
