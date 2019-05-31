@@ -18,11 +18,11 @@ namespace EFCoreDatabaseFirstSample.Controllers
             _dataRepository = dataRepository;
         }
 
-        // GET: api/sql/books/5
-        [HttpGet("{id}")]
+        [HttpGet]
+        [Route("[action]/{id:int}", Name = "GetBookById")]
         [ProducesResponseType(typeof(Book), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public IActionResult GetById(int id)
+        public IActionResult GetBookById(int id)
         {
             var book = _dataRepository.Get(id);
             if (book == null)
@@ -68,7 +68,7 @@ namespace EFCoreDatabaseFirstSample.Controllers
             }
             await _dataRepository.Add(book);
             
-            return CreatedAtRoute(nameof(GetById), new { id = book.Id }, book);
+            return CreatedAtRoute("GetBookById", new { id = book.Id }, book);
         }
 
         // POST: api/sql/books/UpdateBook
@@ -89,12 +89,12 @@ namespace EFCoreDatabaseFirstSample.Controllers
                 return BadRequest(result);
             }
             
-            return CreatedAtRoute(nameof(GetById), new { id = book.Id }, book);
+            return CreatedAtRoute("GetBookById", new { id = book.Id }, book);
         }
 
         // POST: api/sql/books/DeleteBook
         [HttpPost]
-        [Route("[action]")]
+        [Route("[action]/{id:int}")]
         [ProducesResponseType(typeof(Book), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<IActionResult> DeleteBook(int id)

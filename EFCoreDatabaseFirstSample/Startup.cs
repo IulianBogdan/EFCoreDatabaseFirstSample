@@ -33,6 +33,7 @@ namespace EFCoreDatabaseFirstSample
             services.AddScoped<IDataRepository<Author>, AuthorDataManager>();
             services.AddScoped<IDataRepository<Book>, BookDataManager>();
             services.AddScoped<IDataRepository<Publisher>, PublisherDataManager>();
+            services.AddScoped<IDataRepository<BookAuthors>, BookAuthorDataManager>();
 
             services.AddMvc()
                 .AddJsonOptions(

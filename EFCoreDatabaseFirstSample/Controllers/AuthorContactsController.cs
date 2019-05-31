@@ -18,6 +18,7 @@ namespace EFCoreDatabaseFirstSample.Controllers
         }
 
         [HttpGet]
+        [Route("[action]")]
         public IActionResult Get()
         {
             var authorContacts = _dataRepository.GetAll();
@@ -25,9 +26,10 @@ namespace EFCoreDatabaseFirstSample.Controllers
         }
 
         [HttpGet("{id}")]
+        [Route("[action]/{id:int}", Name="GetAuthorContactsById")]
         [ProducesResponseType(typeof(AuthorContact), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public IActionResult GetById(int id)
+        public IActionResult GetAuthorContactsById(int id)
         {
             var authorContact = _dataRepository.Get(id);
             if (authorContact == null)
@@ -39,6 +41,7 @@ namespace EFCoreDatabaseFirstSample.Controllers
         }
 
         [HttpPost]
+        [Route("[action]")]
         [ProducesResponseType(typeof(AuthorContact), StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<IActionResult> AddAuthorContact(AuthorContact authorContact)
@@ -49,10 +52,11 @@ namespace EFCoreDatabaseFirstSample.Controllers
             }
             await _dataRepository.Add(authorContact);
 
-            return CreatedAtRoute(nameof(GetById), new { id = authorContact.AuthorContactId }, authorContact);
+            return CreatedAtRoute("GetAuthorContactsById", new { id = authorContact.AuthorContactId }, authorContact);
         }
 
         [HttpPost]
+        [Route("[action]")]
         [ProducesResponseType(typeof(AuthorContact), StatusCodes.Status202Accepted)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<IActionResult> UpdateAuthorContact(AuthorContact authorContact)
@@ -68,10 +72,11 @@ namespace EFCoreDatabaseFirstSample.Controllers
                 return BadRequest(result);
             }
 
-            return CreatedAtRoute(nameof(GetById), new { id = authorContact.AuthorContactId }, authorContact);
+            return CreatedAtRoute("GetAuthorContactsById", new { id = authorContact.AuthorContactId }, authorContact);
         }
 
         [HttpPost]
+        [Route("[action]/{id:int}")]
         [ProducesResponseType(typeof(AuthorContact), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<IActionResult> DeleteAuthorContact(int id)

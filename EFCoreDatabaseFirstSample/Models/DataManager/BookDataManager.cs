@@ -58,7 +58,7 @@ namespace EFCoreDatabaseFirstSample.Models.DataManager
                 return "Book not found";
             }
 
-            var result = await _bookStoreContext.Database.ExecuteSqlCommandAsync("EXECUTE dbo.update_with_lock {0} {1} {2} {3} {4} {5} {6}",
+            var result = await _bookStoreContext.Database.ExecuteSqlCommandAsync("EXECUTE dbo.update_with_lock @p0, @p1, @p2, @p3, @p4, @p5, @p6",
                 entity.Id, entity.Title, entity.CategoryId, entity.PublisherId, entity.Isbn, entity.PublicationYear, entity.Summary);
 
             if (result > 0)
