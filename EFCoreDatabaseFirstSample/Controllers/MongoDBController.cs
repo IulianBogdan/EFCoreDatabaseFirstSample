@@ -83,6 +83,7 @@ namespace EFCoreDatabaseFirstSample.Controllers
         [Route("getAll")]
         [HttpGet]
         public List<Book> Get()
+        public  List<Book> GetAll()
         {
             var collection = db.GetCollection<BsonDocument>("Book");
             var list = new List<Book>();
