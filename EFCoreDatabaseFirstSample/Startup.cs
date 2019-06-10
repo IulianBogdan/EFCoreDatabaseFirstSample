@@ -29,11 +29,13 @@ namespace EFCoreDatabaseFirstSample
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<BookStoreContext>(opts => opts.UseSqlServer(Configuration["ConnectionString:BooksDB"]));
+            services.AddDbContext<BookStoreContext>(opts => opts.UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking).UseSqlServer(Configuration["ConnectionString:BooksDB"]));
             services.AddScoped<IDataRepository<Author>, AuthorDataManager>();
             services.AddScoped<IDataRepository<Book>, BookDataManager>();
             services.AddScoped<IDataRepository<Publisher>, PublisherDataManager>();
             services.AddScoped<IDataRepository<BookAuthors>, BookAuthorDataManager>();
+            services.AddScoped<IDataRepository<AuthorContact>, AuthorContactDataManager>();
+            services.AddScoped<IDataRepository<BookCategory>, BookCategoryDataManager>();
 
             services.AddMvc()
                 .AddJsonOptions(
